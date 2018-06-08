@@ -1,0 +1,119 @@
+﻿<link rel="stylesheet" href="~/css/productDetails.css">
+<link rel="stylesheet" type="text/css" href="~/css/product.css">
+@{
+    Product p = Gift4U.Util.ProductsManager.getProductById(int.Parse((string)ViewData["id"]));
+    string[] imagePaths = p.getProductImages();
+    string[] colors = p.getProductColors();
+    string[] sizes = p.getProductSizes();
+    string tag = p.getProductTag();
+<!-- .navigation -->
+<div class="navigation container">
+    <ul>
+        @{
+            string prevPageString = (string)ViewData["PrevPage"];
+            string[] prevPage = prevPageString.Split("-");
+            foreach (string prev in prevPage)
+            {
+                <li><a href="@Gift4U.Util.PageConnectionManager.getPageHref(prev)">@prev</a></li>
+            }
+        }
+        <li><a style="opacity: .5">@p.getProductName()</a></li>
+    </ul>
+</div>
+<!-- /.navigation -->
+<!-- .product-details -->
+<div class="product-details">
+    <div class="product-details-right">
+        <div class="product-picture">
+            <i class="zoom-hint"></i>
+            <img id="zoom-img" src="~/img/@imagePaths[0]">
+        </div>
+        <div class="product-picture-guide">
+            <img class="guide-img selected" src="~/img/@imagePaths[0]">
+            @for (int i =1; i < imagePaths.Length; i++){
+                <img class="guide-img" src="~/img/@imagePaths[i]">
+            }
+        </div>
+        <div class="product-description">
+            <p>@p.getProductDescription()</p>
+        </div>
+    </div>
+    <div class="product-details-left">
+        <div class="product-name">
+            <h1>@p.getProductName()</h1>
+        </div>
+        <div class="product-price">
+            <h3>$@p.getProductPrice()</h3>
+        </div>
+        @if(colors!=null && colors.Length>0){
+            <div class="color">
+                <h4>Color</h4>
+                <div id="color-tip" class="tooltip right" role="tooltip">
+                    <div class="tooltip-arrow"></div>
+                    <div class="tooltip-inner">
+                        Select-color
+                    </div>
+                </div>
+                <ul>
+                    @foreach (string color in colors) {
+                        <li>
+                            <div class="color-label" style="background-color: @color;" id="@color"></div>
+                        </li>
+                    }
+                </ul>
+            </div>
+        }
+        @if(sizes!=null && sizes.Length>0){
+        <div id="size">
+            <h4>Size</h4>
+            <div id="selected-size">
+                <span>@sizes[0]</span>
+                <b></b>
+            </div>
+            <div id="size-list">
+                <ul>
+                    @foreach (String size in sizes) {
+                        <li><span>@size</span></li>
+                    }
+                </ul>
+            </div>
+        </div>
+        }
+        <div class="quantity">
+            <h4>Quantity</h4>
+            <div class="input-group input-postfix">
+                <input id="quantity-input" type="number" name="quantity" min=1>
+                <div class="spinner-arrows">
+                    <span id="up-arrow" class="up-arrow glyphicon-arrow_up" role="button"></span>
+                    <span id="down-arrow" class="down-arrow glyphicon-arrow_down" role="button"></span>
+                </div>
+            </div>
+        </div>
+        <span style="display: none">id=@p.getProductId()</span>
+        <button id="btn-add-to-cart" class="gift4u-button" data-loading-text="ADDING..." autocomplete="off">ADD TO CART</button>
+        <div id="add-success" class="alert alert-success fade in" style="display: none;">
+            <button type="button" class="close">
+                &times;
+            </button>
+            <p>Add Successfully!</p>
+        </div>
+        <ul class="product-parameters">
+            <li>
+                <button><h3 class="on">PRODUCT INFO</h3></button>
+                <p>@p.getProductInfo()</p>
+            </li>
+            <li>
+                <button><h3 class="off">RETURN & REFUND POLICY</h3></button>
+                <p>@p.getProductReturnAndRefeundPolicy()</p>
+            </li>
+            <li>
+                <button><h3 class="off">SHIPPING INFO</h3></button>
+                <p>@p.getProductShippingInfo()</p>
+            </li>
+        </ul>
+    </div>
+</div>
+}
+<!-- /.product-details -->
+<script src="~/js/productDetails.js"></script>
+<script type="text/javascript" src="~/js/product.js"></script>

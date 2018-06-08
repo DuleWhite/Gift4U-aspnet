@@ -1,0 +1,64 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.All" Version="2.0.0" />
+    <PackageReference Include="MySql.Data" Version="8.0.11" />
+    <PackageReference Include="Microsoft.AspNetCore.Session" Version="2.1.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <DotNetCliToolReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Tools" Version="2.0.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Remove="Views\Home\_Layout.cshtml" />
+    <Content Remove="wwwroot\lib\bootstrap\.bower.json" />
+    <Content Remove="wwwroot\css\fonts\slick.ttf" />
+    <Content Remove="wwwroot\css\fonts\slick.woff" />
+    <Content Remove="wwwroot\font\80c34ad2-27c2-4d99-90fa-985fd64ab81a.woff" />
+    <Content Remove="wwwroot\font\54006f54-b61e-4103-abf8-b1d0294a2a9c.ttf" />
+    <Content Remove="wwwroot\font\03805817-4611-4dbc-8c65-0f73031c3973.woff" />
+    <Content Remove="wwwroot\font\Antreas.ttf" />
+    <Content Remove="wwwroot\font\Avenir LT W01 35 Light.ttf" />
+    <Content Remove="wwwroot\font\b8cb02c2-5b58-48d8-9501-8d02869154c2.ttf" />
+    <Content Remove="wwwroot\font\cacc0862-f146-4746-92b1-60e6114a66c4.woff" />
+    <Content Remove="wwwroot\font\d5f9f72d-afb7-4c57-8348-b4bdac42edbb.ttf" />
+    <Content Remove="wwwroot\font\FuturaLT-Book.otf" />
+    <Content Remove="wwwroot\font\glyphicons-halflings-regular.ttf" />
+    <Content Remove="wwwroot\font\Museo-700.otf" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Util\" />
+    <Folder Include="wwwroot\css\" />
+    <Folder Include="wwwroot\js\" />
+    <Folder Include="wwwroot\css\fonts\" />
+    <Folder Include="wwwroot\font\" />
+    <Folder Include="Views\Products\" />
+    <Folder Include="Views\Orders\" />
+    <Folder Include="Views\Cart\" />
+    <Folder Include="Views\Account\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Remove="Util\EmptyClass.cs" />
+    <Compile Remove="System\Web\Security.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="wwwroot\css\fonts\slick.ttf" />
+    <None Include="wwwroot\css\fonts\slick.woff" />
+    <None Include="wwwroot\font\80c34ad2-27c2-4d99-90fa-985fd64ab81a.woff" />
+    <None Include="wwwroot\font\54006f54-b61e-4103-abf8-b1d0294a2a9c.ttf" />
+    <None Include="wwwroot\font\03805817-4611-4dbc-8c65-0f73031c3973.woff" />
+    <None Include="wwwroot\font\Antreas.ttf" />
+    <None Include="wwwroot\font\Avenir LT W01 35 Light.ttf" />
+    <None Include="wwwroot\font\b8cb02c2-5b58-48d8-9501-8d02869154c2.ttf" />
+    <None Include="wwwroot\font\cacc0862-f146-4746-92b1-60e6114a66c4.woff" />
+    <None Include="wwwroot\font\d5f9f72d-afb7-4c57-8348-b4bdac42edbb.ttf" />
+    <None Include="wwwroot\font\FuturaLT-Book.otf" />
+    <None Include="wwwroot\font\glyphicons-halflings-regular.ttf" />
+    <None Include="wwwroot\font\Museo-700.otf" />
+  </ItemGroup>
+</Project>

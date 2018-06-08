@@ -1,0 +1,37 @@
+﻿@{
+    ViewData["Title"] = "Sign Up";
+}
+<link rel="stylesheet" type="text/css" href="~/css/account.css">
+<!-- .signupin -->
+<div class="signupin">
+    <div class="panel">
+        <h2>Sign up</h2>
+        <div class="content">
+            <div class="left">
+                <img src="/img/logo4.png">
+            </div>
+            <div class="right">
+                <label>Username</label>
+                <div>
+                    <input id="username" type="text" maxlength=12 minlength=12 name="username">
+                </div>
+                <label>Phone number</label>
+                <div>
+                    <input id="phone" type="number" maxlength=11 minlength=11 name="phoneNumber">
+                    <button id="getCode1">Send</button>
+                </div>
+                <label>Verification code</label>
+                <div>
+                    <input id="code" type="number" maxlength=6 minlength=6 name="verificationCode">
+                    <button id="signUp">Sign Up</button>
+                </div>
+                <span class="hint">hint:</span>
+                <span class="have-account">
+                    Already have account?  <a href="/Account/Login">Login</a>
+                </span>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- / .signupin -->
+<script type="text/javascript" src="~/js/account.js?"></script>

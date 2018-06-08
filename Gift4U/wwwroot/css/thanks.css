@@ -1,0 +1,125 @@
+@media(min-width: 0) {
+    .thanks {
+        width: 100%;
+    }
+    .thanks-body {
+        width: 80%;
+        padding: 5% 8%;
+    }
+}
+
+@media(min-width: 768px) {
+    .thanks {
+        width: 768px;
+    }
+    .thanks-body {
+        width: 660px;
+        padding: 45px;
+    }
+}
+
+@media(min-width: 992px) {
+    .thanks {
+        width: 992px;
+    }
+    .thanks-body {
+        width: 660px;
+        padding: 45px;
+    }
+}
+
+@media(min-width: 1200px) {
+    .thanks {
+        width: 1200px;
+    }
+    .thanks-body {
+        width: 660px;
+        padding: 45px;
+    }
+}
+
+.thanks {
+    margin: 0 auto;
+    padding: 100px 20px 20px;
+    font: normal normal normal 20px/1.25em Museo-700, serif;
+    font-size: 16px;
+}
+
+.thanks-header h2 {
+    display: block;
+    margin-bottom: 30px;
+    margin-top: 0;
+    text-align: center;
+    line-height: 1em;
+    font-size: 32px;
+    font-weight: 400;
+}
+
+.thanks-header span {
+    display: block;
+    text-align: center;
+    font-size: 22px;
+    line-height: 1.4;
+}
+
+.thanks-body {
+    border-style: solid;
+    margin: 60px auto;
+    border-width: 1px;
+    border-color: rgba(10, 15, 19, 0.20081967213114754);
+    background: rgba(255, 255, 255, 0);
+    min-height: 10px;
+}
+
+.thanks-body ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.thanks-body ul li {
+    overflow: hidden;
+    border-bottom-color: rgba(10, 15, 19, 0.20081967213114754);
+    border-bottom-width: 1px;
+    border-bottom-style: solid;
+    padding: 30px 0;
+}
+
+.thanks-body ul li:first-child {
+    padding-top: 0;
+}
+
+.thanks-body ul li:last-child {
+    border: 0;
+    padding-bottom: 0;
+}
+
+.thanks-body ul li>span:first-child {
+    float: left;
+    font-size: 20px;
+}
+
+.thanks-body ul li>span:last-child {
+    float: right;
+}
+
+.thanks-body ul li:last-child>span:first-child,
+.thanks-body ul li:last-child>span:last-child {
+    float: none;
+}
+
+.thanks-body ul li:last-child span {
+    display: block;
+}
+
+.continue-shopping {
+    width: 100%;
+    margin-bottom: 150px;
+}
+
+.continue-shopping a {
+    text-align: center;
+    text-decoration: underline;
+    color: black;
+    display: block;
+}

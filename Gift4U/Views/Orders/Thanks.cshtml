@@ -1,0 +1,39 @@
+﻿@{
+    ViewData["Title"] = "Thanks";
+}
+<link rel="stylesheet" type="text/css" href="~/css/thanks.css">
+<div class="thanks">
+    <!-- .thanks-header -->
+    <div class="thanks-header">
+        <h2> Thank you for shopping with us, @ViewData["username"]</h2>
+        <span>Hope to see you again soon!</span>
+    </div>
+    <!-- /.thanks-header -->
+    <!-- .thanks-body -->
+    <div class="thanks-body">
+        <ul>
+            <li>
+                <span>Order No.</span>
+                <span>@ViewData["orderId"]</span>
+            </li>
+            <li>
+                <span>Total</span>
+                <span>$@ViewData["totalPrice"]</span>
+            </li>
+            <li>
+                <span>Shipping to</span>
+                <div>
+                    <span>Adress</span>
+                    <span>@ViewData["shippingTo2"]</span>
+                    <span>@ViewData["shippingTo1"]</span>
+                </div>
+            </li>
+        </ul>
+    </div>
+    <!-- /.thanks-body -->
+    <!-- .continue-shopping -->
+    <div class="continue-shopping">
+        <a href="/Products">Continue Shopping</a>
+    </div>
+    <!-- /.continue-shopping -->
+</div>

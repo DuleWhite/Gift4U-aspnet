@@ -1,0 +1,107 @@
+﻿@{
+    ViewData["Title"] = "Products";
+}
+<link rel="stylesheet" href="~/css/productDetails.css">
+<link rel="stylesheet" href="~/css/products.css">
+<!-- .list -->
+<div class="list container row">
+    @{
+        List<Product> products = Gift4U.Util.ProductsManager.getProducts();
+        foreach (Product p in products)
+        {
+            string[] imagePaths = p.getProductImages();
+            string tag = p.getProductTag();
+            <div class="product-item col-lg-3 col-md-4 col-sm-6 col-xs-12">
+                <span style="display: none; ">id=@p.getProductId()</span>
+                <div class="product-panel">
+                    <div class="image">
+                        <a href="~/Products/Product?id=@p.getProductId()">
+                            <img src="~/img/@imagePaths[0]">
+                        </a>
+                        @{
+                            if (tag != null && tag != "")
+                            {
+                                <span class="product-tag">@tag</span>
+                            }
+                        }
+                        <button class="product-qwbtn">QUICK VIEW</button>
+                    </div>
+                    <a href="~/product?id=@p.getProductId()">
+                        <div class="product-info" class="container">
+                            <h3>@p.getProductName()</h3>
+                            <h5>$@p.getProductPrice()</h5>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        }
+    }
+</div>
+<!-- /.list -->
+<!-- .product-quick-view-modal -->
+<div class="product-quick-view-modal artModal fade" id="product-quick-view-modal">
+    <div class="artModal-dialog">
+        <button class="btn-close" data-dismiss="artModal">x</button>
+        <div class="artModal-content">
+            <div class="product-details modal-body">
+                <div class="product-details-right">
+                    <div class="product-picture">
+                        <i class="zoom-hint"></i>
+                        <img id="zoom-img" src="~/img/product-1-1-s.jpg">
+                    </div>
+                    <div id="productImages" class="product-picture-guide">
+                    </div>
+                </div>
+                <div class="product-details-left">
+                    <div class="product-name">
+                        <h1 id="productName"></h1>
+                    </div>
+                    <div class="product-price">
+                        <h3 id="productPrice"></h3>
+                    </div>
+                    <div class="color" id="color">
+                        <h4>Color</h4>
+                        <div id="color-tip" class="tooltip right" role="tooltip">
+                            <div class="tooltip-arrow"></div>
+                            <div class="tooltip-inner">
+                                Select-color
+                            </div>
+                        </div>
+                        <ul></ul>
+                    </div>
+                    <div id="size">
+                        <h4>Size</h4>
+                        <div id="selected-size">
+                            <span></span>
+                            <b></b>
+                        </div>
+                        <div id="size-list">
+                            <ul></ul>
+                        </div>
+                    </div>
+                    <div class="quantity">
+                        <h4>Quantity</h4>
+                        <div class="input-group input-postfix">
+                            <input id="quantity-input" type="number" name="quantity" min=1>
+                            <div class="spinner-arrows">
+                                <span id="up-arrow" class="up-arrow glyphicon-arrow_up" role="button"></span>
+                                <span id="down-arrow" class="down-arrow glyphicon-arrow_down" role="button"></span>
+                            </div>
+                        </div>
+                    </div>
+                    <span style="display: none;" id="productId"></span>
+                    <button id="btn-add-to-cart" class="gift4u-button" data-loading-text="ADDING..." autocomplete="off">ADD TO CART</button>
+                    <div id="add-success" class="alert alert-success fade in" style="display: none;">
+                        <button type="button" class="close">
+                            &times;
+                        </button>
+                        <p>Add Successfully!</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- /.product-quick-view-modal -->
+<script src="~/js/productDetails.js"></script>
+<script src="~/js/products.js"></script>

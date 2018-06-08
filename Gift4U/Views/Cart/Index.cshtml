@@ -1,0 +1,218 @@
+﻿<link rel="stylesheet" href="~/css/cart.css">
+<!-- .cart-list -->
+<div class="cart-list">
+@{
+    ViewData["Title"] = "Cart";
+    String cartProductsString = (String)ViewData["cartProducts"];
+    if (cartProductsString != null && cartProductsString != "")
+    {
+        Gift4U.Util.CartProductManager.updateCartProducts(cartProductsString);
+    }
+    List<CartProduct> cartProducts = Gift4U.Util.CartProductManager.getCartProducts();
+    string emptyCartDisplay;
+    if (Gift4U.Util.CartProductManager.getCount() == 0)
+    {
+        emptyCartDisplay = "block";
+    }
+    else
+    {
+        emptyCartDisplay = "none";
+    }
+    <!-- .continue-shopping -->
+    <div class="continue-shopping">
+        <a href="/Products">
+            <span>
+                <svg width="1em" height="1em" viewBox="0 0 7 12">
+                    <g>
+                        <path d="M6.572 1.354L5.865.646.293 6.218l5.585 5.585.707-.707-4.878-4.878z" fill="currentColor" fill-rule="nonzero"></path>
+                    </g>
+                </svg>
+            </span>Continue Shopping
+        </a>
+        @if (Gift4U.Util.CartProductManager.getCount() > 0)
+        {
+        <button class="checkout">
+            <span>
+                <svg width="1em" height="1em" viewBox="0 0 11 14">
+                    <g>
+                        <g fill="currentColor" fill-rule="evenodd">
+                            <path d="M0 12.79c0 .558.445 1.01.996 1.01h9.008A1 1 0 0 0 11 12.79V6.01c0-.558-.445-1.01-.996-1.01H.996A1 1 0 0 0 0 6.01v6.78z"></path>
+                            <path d="M9.5 5v-.924C9.5 2.086 7.696.5 5.5.5c-2.196 0-4 1.586-4 3.576V5h1v-.924c0-1.407 1.33-2.576 3-2.576s3 1.17 3 2.576V5h1z" fill-rule="nonzero"></path>
+                        </g>
+                    </g>
+                </svg>
+                Checkout
+            </span>
+        </button>
+        }
+    </div>
+    <!-- /.continue-shopping -->
+    <!-- .item-list -->
+    <div class="item-list">
+        <div class="list-header">
+            <div class="list-title">
+                <h2>My Cart</h2>
+                @if (Gift4U.Util.CartProductManager.getCount() > 0)
+                {
+                <span>(@Gift4U.Util.CartProductManager.getCount())</span>
+                }
+            </div>
+            @if (Gift4U.Util.CartProductManager.getCount() > 0)
+            {
+            <div class="list-parameters">
+                <div>Price</div>
+                <div>Qty</div>
+                <div class="item-total">Total</div>
+            </div>
+            }
+        </div>
+        <!-- .empty-cart -->
+        <div class="empty-cart" style="display: @emptyCartDisplay;">
+            <span>Cart is empty</span>
+            <div>
+                <a href="/Products">Continue Shopping</a>
+            </div>
+        </div>
+        <!-- /.empty-cart -->
+        @if (Gift4U.Util.CartProductManager.getCount() > 0)
+        {
+        <div class="list-body">
+            @foreach (CartProduct cp in cartProducts)
+            {
+            <div class="item">
+                <div class="item-left">
+                    <a class="item-picture-preview" href="/Products/Product?id=@cp.getProductId()">
+                        <img src="/img/@cp.getProductImages()[0]">
+                    </a>
+                    <div class="item-info">
+                        <h3>@cp.getProductName()</h3>
+                        <div class="item-property">
+                            <span>PID: @cp.getProductId()</span>
+                            @if (cp.hasColor())
+                            {
+                            <span>Color: @cp.getProductColor()</span>
+                            }
+                            @if (cp.hasSize())
+                            {
+                            <span>Size: @cp.getProductSize()</span>
+                            }
+                            <span>$@cp.getProductPrice()</span>
+                        </div>
+                        <button class="btn-remove">
+                            <span>Remove</span>
+                        </button>
+                    </div>
+                </div>
+                <div class="item-right">
+                    <div><span>$@cp.getProductPrice()</span></div>
+                    <div>
+                        <div class="input-group input-postfix">
+                            <input class="quantity-input" type="number" name="quantity" min="1" value="@cp.getQuantity()">
+                            <div class="spinner-arrows">
+                                <span class="up-arrow glyphicon-arrow_up" role="button"></span>
+                                <span class="down-arrow glyphicon-arrow_down" role="button"></span>
+                            </div>
+                        </div>
+                    </div>
+                    @{ 
+                        double item_total = cp.getProductPrice() * cp.getQuantity();
+                    }
+                    <div class="item-total"><span>$@item_total</span></div>
+                </div>
+            </div>
+            }
+        </div>
+        }
+    </div>
+    <!-- /.item-list -->
+    <!-- .summary -->
+    @if (Gift4U.Util.CartProductManager.getCount() > 0)
+    {
+    <div class="summary">
+        <div class="summary-left">
+            <button class="btn-add-note">
+                <svg width="1em" height="1em" viewBox="0 0 12 13">
+                    <g>
+                        <g fill="none" fill-rule="evenodd">
+                            <path d="M.5.5h7.778L11.5 3.737V12.5H.5V.5z" stroke="currentColor"></path>
+                            <path d="M10.793 3.5H8.5V1.207L10.793 3.5z" stroke="currentColor"></path>
+                            <path fill="currentColor" d="M3 3h3v1H3zM3 6h6v1H3zM3 9h6v1H3z"></path>
+                        </g>
+                    </g>
+                </svg>
+                <span>Add a note</span>
+            </button>
+            <div id="cart-note" class="cart-note">
+                <textarea id="note-text" maxlength="250" class="_32uvq" placeholder="Instructions? Special requests? Add them here." aria-label="Instructions? Special requests? Add them here."></textarea>
+            </div>
+            <div class="secure-shopping">
+                <img src="../img/secure-shopping.png">
+            </div>
+        </div>
+        <div class="summary-right">
+            <div class="summary-list">
+                <div class="summary-item">
+                    <dl>
+                        <div class="summary-item-subtotal">
+                            <dt>Subtotal</dt>
+                            <dd id="subtotal">$@Gift4U.Util.CartProductManager.getTotalPrice()</dd>
+                        </div>
+                        <div class="summary-item-shipping">
+                            <dt>
+                                <div>
+                                    <span>Shipping</span>
+                                    <div>
+                                        <button id="shipping-dist">Inner Mongolia, Hohhot, Saihan</button>
+                                    </div>
+                                </div>
+                            </dt>
+                            <dd>FREE</dd>
+                        </div>
+                    </dl>
+                </div>
+                <div class="summary-total">
+                    <dl>
+                        <dt>Total</dt>
+                        <dd id="total-price">$@Gift4U.Util.CartProductManager.getTotalPrice()</dd>
+                    </dl>
+                </div>
+            </div>
+            <button class="checkout">
+                <span>
+                    <svg width="1em" height="1em" viewBox="0 0 11 14">
+                        <g>
+                            <g fill="currentColor" fill-rule="evenodd">
+                                <path d="M0 12.79c0 .558.445 1.01.996 1.01h9.008A1 1 0 0 0 11 12.79V6.01c0-.558-.445-1.01-.996-1.01H.996A1 1 0 0 0 0 6.01v6.78z"></path>
+                                <path d="M9.5 5v-.924C9.5 2.086 7.696.5 5.5.5c-2.196 0-4 1.586-4 3.576V5h1v-.924c0-1.407 1.33-2.576 3-2.576s3 1.17 3 2.576V5h1z" fill-rule="nonzero"></path>
+                            </g>
+                        </g>
+                    </svg>
+                    Checkout
+                </span>
+            </button>
+        </div>
+    </div>
+    }
+    <!-- /.summary -->
+}
+</div>
+<!-- /.cart-list -->
+<!-- .distpicker -->
+<div id="distpicker" class="distpicker artModal fade">
+    <div class="artModal-dialog">
+        <button class="btn-close" data-dismiss="artModal">x</button>
+        <div class="artModal-content" data-toggle="distpicker">
+            <h3>Select Destination</h3>
+            <label>Province</label>
+            <select id="select-province" data-province="Inner Mongolia"></select>
+            <label>City</label>
+            <select id="select-city" data-city="Hohhot"></select>
+            <label>Area</label>
+            <select id="select-area" data-district="Saihan"></select>
+            <button id="btn-update" class="btn-update">Update</button>
+        </div>
+    </div>
+</div>
+<!-- /.distpicker -->
+<script type="text/javascript" src="~/js/distpicker.min.js"></script>
+<script type="text/javascript" src="~/js/cart.js"></script>
