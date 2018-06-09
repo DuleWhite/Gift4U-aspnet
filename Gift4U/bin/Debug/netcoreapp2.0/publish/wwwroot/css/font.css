@@ -1,0 +1,52 @@
+@font-face {
+    font-family: Museo-700;
+    src: url("../font/Museo-700.otf");
+}
+
+@font-face {
+    font-family: Antreas;
+    src: url("../font/Antreas.ttf");
+}
+
+@font-face {
+    font-family: glyphicons;
+    src: url("../font/glyphicons-halflings-regular.ttf");
+    /*src: ulr("../font/glyphicons.woff");*/
+}
+
+@font-face {
+    font-family: avenir-lt-w01_35-light1475496;
+    src: url("../font/Avenir LT W01 35 Light.ttf");
+}
+
+@font-face {
+    font-family: Futura-LT-Book;
+    src: url("../font/FuturaLT-Book.otf");
+}
+
+@font-face {
+    font-family: "Museo-Slab-W01-100";
+    src: url("//static.parastorage.com/services/third-party/fonts/user-site-fonts/fonts/01ab709f-22cf-4831-b24a-8cf4eb852687.eot?#iefix");
+    src: url("//static.parastorage.com/services/third-party/fonts/user-site-fonts/fonts/01ab709f-22cf-4831-b24a-8cf4eb852687.eot?#iefix") format("eot"),
+    url("../font/cacc0862-f146-4746-92b1-60e6114a66c4.woff") format("woff"),
+    url("../font/54006f54-b61e-4103-abf8-b1d0294a2a9c.ttf") format("truetype"),
+    url("//static.parastorage.com/services/third-party/fonts/user-site-fonts/fonts/e5841f2e-b306-4583-bfc3-a0e06742fedd.svg#e5841f2e-b306-4583-bfc3-a0e06742fedd") format("svg");
+}
+
+@font-face {
+    font-family: "Helvetica-W01-Light";
+    src: url("//static.parastorage.com/services/third-party/fonts/user-site-fonts/fonts/717f8140-20c9-4892-9815-38b48f14ce2b.eot?#iefix");
+    src: url("//static.parastorage.com/services/third-party/fonts/user-site-fonts/fonts/717f8140-20c9-4892-9815-38b48f14ce2b.eot?#iefix") format("eot"),
+    url("../font/03805817-4611-4dbc-8c65-0f73031c3973.woff") format("woff"),
+    url("../font/d5f9f72d-afb7-4c57-8348-b4bdac42edbb.ttf") format("truetype"),
+    url("//static.parastorage.com/services/third-party/fonts/user-site-fonts/fonts/05ad458f-263b-413f-b054-6001a987ff3e.svg#05ad458f-263b-413f-b054-6001a987ff3e") format("svg");
+}
+
+@font-face {
+    font-family: "Helvetica-W02-Light";
+    src: url("//static.parastorage.com/services/third-party/fonts/user-site-fonts/fonts/ff80873b-6ac3-44f7-b029-1b4111beac76.eot?#iefix");
+    src: url("//static.parastorage.com/services/third-party/fonts/user-site-fonts/fonts/ff80873b-6ac3-44f7-b029-1b4111beac76.eot?#iefix") format("eot"),
+    url("../font/80c34ad2-27c2-4d99-90fa-985fd64ab81a.woff") format("woff"),
+    url("../font/b8cb02c2-5b58-48d8-9501-8d02869154c2.ttf") format("truetype"),
+    url("//static.parastorage.com/services/third-party/fonts/user-site-fonts/fonts/92c941ea-2b06-4b72-9165-17476d424d6c.svg#92c941ea-2b06-4b72-9165-17476d424d6c") format("svg");
+}

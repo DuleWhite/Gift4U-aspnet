@@ -30,6 +30,7 @@
     <Content Remove="wwwroot\font\FuturaLT-Book.otf" />
     <Content Remove="wwwroot\font\glyphicons-halflings-regular.ttf" />
     <Content Remove="wwwroot\font\Museo-700.otf" />
+    <Content Remove="hosting.json" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Util\" />

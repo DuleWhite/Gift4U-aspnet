@@ -1,0 +1,17 @@
+/Users/duulewhite/Documents/Course/Web Development/Homework/信管_0141440549_杜乐/大作业/Gift4U-aspnet/Gift4U
+--output-path=obj/Debug/netcoreapp2.0/
+--application-name=Gift4U
+--content-root=/Users/duulewhite/Documents/Course/Web Development/Homework/信管_0141440549_杜乐/大作业/Gift4U-aspnet/Gift4U
+--file=/Users/duulewhite/Documents/Course/Web Development/Homework/信管_0141440549_杜乐/大作业/Gift4U-aspnet/Gift4U/Views/Account/Login.cshtml
+--file=/Users/duulewhite/Documents/Course/Web Development/Homework/信管_0141440549_杜乐/大作业/Gift4U-aspnet/Gift4U/Views/Account/Signup.cshtml
+--file=/Users/duulewhite/Documents/Course/Web Development/Homework/信管_0141440549_杜乐/大作业/Gift4U-aspnet/Gift4U/Views/Cart/Index.cshtml
+--file=/Users/duulewhite/Documents/Course/Web Development/Homework/信管_0141440549_杜乐/大作业/Gift4U-aspnet/Gift4U/Views/Home/Index.cshtml
+--file=/Users/duulewhite/Documents/Course/Web Development/Homework/信管_0141440549_杜乐/大作业/Gift4U-aspnet/Gift4U/Views/Orders/Index.cshtml
+--file=/Users/duulewhite/Documents/Course/Web Development/Homework/信管_0141440549_杜乐/大作业/Gift4U-aspnet/Gift4U/Views/Orders/Thanks.cshtml
+--file=/Users/duulewhite/Documents/Course/Web Development/Homework/信管_0141440549_杜乐/大作业/Gift4U-aspnet/Gift4U/Views/Products/Index.cshtml
+--file=/Users/duulewhite/Documents/Course/Web Development/Homework/信管_0141440549_杜乐/大作业/Gift4U-aspnet/Gift4U/Views/Products/Product.cshtml
+--file=/Users/duulewhite/Documents/Course/Web Development/Homework/信管_0141440549_杜乐/大作业/Gift4U-aspnet/Gift4U/Views/Shared/Error.cshtml
+--file=/Users/duulewhite/Documents/Course/Web Development/Homework/信管_0141440549_杜乐/大作业/Gift4U-aspnet/Gift4U/Views/Shared/_Layout.cshtml
+--file=/Users/duulewhite/Documents/Course/Web Development/Homework/信管_0141440549_杜乐/大作业/Gift4U-aspnet/Gift4U/Views/Shared/_ValidationScriptsPartial.cshtml
+--file=/Users/duulewhite/Documents/Course/Web Development/Homework/信管_0141440549_杜乐/大作业/Gift4U-aspnet/Gift4U/Views/_ViewImports.cshtml
+--file=/Users/duulewhite/Documents/Course/Web Development/Homework/信管_0141440549_杜乐/大作业/Gift4U-aspnet/Gift4U/Views/_ViewStart.cshtml

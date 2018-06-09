@@ -1,0 +1,189 @@
+@media(min-width: 0) {
+    .panel {
+        width: 300px
+    }
+    .left {
+        float: none;
+        display: none;
+    }
+    .right {
+        float: none;
+        width: 100%;
+        padding-left: 10px;
+    }
+    .loginpage {
+        margin-top: 40px;
+    }
+    .panel .content .right div input {
+        width: 180px;
+    }
+}
+
+@media(min-width: 768px) {
+    .panel {
+        width: 700px
+    }
+    .left {
+        float: left;
+        width: 50%;
+        display: block;
+    }
+    .right {
+        float: right;
+        width: 50%;
+        padding-left: 40px;
+    }
+    .loginpage {
+        margin-top: 40px;
+    }
+    .panel .content .right div input {
+        width: 180px;
+    }
+}
+
+@media(min-width: 992px) {
+    .panel {
+        width: 800px
+    }
+    .left {
+        float: left;
+        width: 50%;
+        display: block;
+    }
+    .right {
+        float: right;
+        width: 50%;
+        padding-left: 40px;
+    }
+    .loginpage {
+        margin-top: 40px;
+    }
+    .panel .content .right div input {
+        width: 250px;
+    }
+}
+
+@media(min-width: 1200px) {
+    .panel {
+        width: 800px
+    }
+    .left {
+        float: left;
+        width: 50%;
+        display: block;
+    }
+    .right {
+        float: right;
+        width: 50%;
+        padding-left: 40px;
+    }
+    .loginpage {
+        margin-top: 40px;
+    }
+    .panel .content .right div input {
+        width: 250px;
+    }
+}
+
+.signupin {
+    min-height: 850px;
+    overflow: hidden;
+    background: rgba(255, 255, 233, 0.4) url("../img/account_bg.png") no-repeat center;
+    background-size: cover;
+    font-family: Museo-700, serif;
+}
+
+.panel {
+    margin: 180px auto 60px;
+    padding: 0;
+    border: 1px solid white;
+    box-shadow: 10px 10px 5px rgba(20, 20, 20, 0.5);
+    border-radius: 0;
+    min-height: 450px;
+    background-color: rgba(255, 255, 255, 0.9);
+}
+
+.panel h2 {
+    text-align: center;
+    font-size: 22px;
+    margin: 30px auto 60px;
+}
+
+.panel .content .left {
+    min-height: 300px;
+    width: 50%;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    text-align: center;
+    border-right: 1px solid #ccc;
+}
+
+.panel .content .left img {
+    width: 180px;
+    height: 180px;
+    margin-top: 13%;
+}
+
+.panel .content .right {
+    min-height: 300px;
+}
+
+.panel .content .right label,
+.panel .content .right div {
+    display: block;
+}
+
+.panel .content .right label {
+    margin-top: 20px;
+    color: gray;
+    margin-left: 5px;
+}
+
+.panel .content .right label:first-child {
+    margin-top: 0;
+}
+
+.panel .content .right div input {
+    font: normal normal normal 20px/1.25em Museo-700, serif;
+    color: #575757;
+    height: 43px;
+    padding-left: 13px;
+    padding-right: 27px;
+    margin-left: 5px;
+}
+
+.panel .content .right div input::-webkit-outer-spin-button,
+.panel .content .right div input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+}
+
+.panel .content .right div input[type="number"] {
+    -moz-appearance: textfield;
+}
+
+.panel .content .right div button {
+    background-color: rgb(58, 128, 153);
+    color: white;
+    font-size: 14px;
+    font-family: avenir-lt-w01_35-light1475496, sans-serif;
+    height: 43px;
+    width: 80px;
+    margin: 0 0 0 10px;
+    padding: 0;
+    cursor: pointer;
+    border: 0;
+    vertical-align: top;
+}
+
+span.hint {
+    margin-top: 5px;
+    color: red;
+    display: none;
+}
+
+span.have-account {
+    margin-top: 10px;
+    display: block;
+    margin-left: 5px;
+}

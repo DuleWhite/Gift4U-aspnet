@@ -1,0 +1,140 @@
+body {
+    width: 100%;
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+
+.logo {
+    display: block;
+}
+
+footer {
+    background-color: #eee;
+}
+
+.copyright {
+    height: 40px;
+    text-align: center;
+}
+
+.copyright p {
+    line-height: 40px;
+    margin: 0;
+}
+
+.navbar-toggle {
+    font-family: serif;
+    width: auto;
+    color: #333;
+}
+
+input {
+    font: normal normal normal 20px/1.25em Museo-700, serif;
+    color: #575757;
+    height: 43px;
+    padding: 10px;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+}
+
+input[type="number"] {
+    -moz-appearance: textfield;
+}
+
+button {
+    border: 0;
+}
+
+.gift4u-button {
+    margin-top: 30px;
+    background-color: rgba(58, 128, 153, 1);
+    border-width: 0;
+    border-color: rgba(58, 128, 153, 1);
+    border-radius: 0px;
+    font: normal normal normal 16px/1.55em Museo-Slab-W01-100, serif;
+    color: rgba(255, 255, 255, 1);
+    margin-bottom: 30px;
+    text-align: center;
+    width: 100%;
+    padding: 15px 20px;
+}
+
+h4 {
+    color: #5A5959;
+    margin-bottom: 12px;
+    display: block;
+    line-height: 1;
+    font: normal normal normal 20px/1.25em Museo-700, serif;
+    font-size: 15px;
+    opacity: .75;
+}
+
+h3 {
+    margin: 0;
+    padding-top: 23px;
+    margin-left: 5px;
+    font: normal normal normal 24px/1.25em Museo-700, serif;
+}
+
+h1 {
+    margin: 0;
+    font: normal normal normal 48px/1.146em Museo-700, serif;
+}
+
+
+@media (min-width: 0) {
+    .navigation {
+        width: 260px;
+    }
+}
+
+@media (min-width: 768px) {
+    .navigation {
+        width: 550px;
+    }
+}
+
+@media (min-width: 992px) {
+    .navigation {
+        width: 900px;
+    }
+}
+
+@media (min-width: 1200px) {
+    .navigation {
+        width: 940px;
+    }
+}
+
+.navigation {
+    margin: 0 auto;
+    margin-top: 35px;
+    margin-bottom: 60px;
+}
+
+.navigation ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.navigation ul li {
+    display: inline-flex;
+}
+
+.navigation ul li+li:before {
+    content: "/";
+    margin: 0 5px;
+    display: inline-block;
+}
+
+.navigation ul li a {
+    font: normal normal normal 16px/1.55em Museo-Slab-W01-100, serif;
+    color: #0A0F13;
+    text-decoration: none;
+    color: inherit;
+    /*opacity: .5;*/
+}

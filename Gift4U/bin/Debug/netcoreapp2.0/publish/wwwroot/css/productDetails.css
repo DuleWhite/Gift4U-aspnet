@@ -1,0 +1,507 @@
+@keyframes fade-in {
+    0% {
+        opacity: 0;
+    }
+    /*初始状态 透明度为0*/
+    /*50% {opacity: 0.5;}/*过渡状态 透明度为0*/
+    100% {
+        opacity: 1;
+    }
+    /*结束状态 透明度为1*/
+}
+
+@-webkit-keyframes fade-in {
+    /*针对webkit内核*/
+    0% {
+        opacity: 0;
+    }
+    /*50% {opacity: 0.5;}*/
+    100% {
+        opacity: 1;
+    }
+}
+
+.product-details {
+    overflow: hidden;
+    margin: 0 auto;
+    width: 100%;
+}
+
+.product-details-right {
+    padding: 0;
+}
+
+@media (min-width: 0) {
+    .product-details-right {
+        width: 250px;
+        float: none;
+    }
+    .product-picture img {
+        width: 250px;
+        height: 250px;
+    }
+    .product-details-left {
+        width: 250px;
+        float: none;
+    }
+}
+
+@media (min-width: 768px) {
+    .product-details-right {
+        width: 500px;
+        float: none;
+
+    }
+    .product-picture img {
+        width: 500px;
+        height: 500px;
+    }
+    .product-details-left {
+        width: 500px;
+        float: none;
+    }
+}
+
+@media (min-width: 992px) {
+    .product-details-right {
+        width: 500px;
+        float: left;
+    }
+    .product-picture img {
+        width: 500px;
+        height: 500px;
+    }
+    .product-details-left {
+        width: 355px;
+        float: right;
+    }
+}
+
+@media (min-width: 1200px) {
+    .product-details-right {
+        width: 500px;
+        float: left;
+    }
+    .product-picture img {
+        width: 500px;
+        height: 500px;
+    }
+    .product-details-left {
+        width: 355px;
+        float: right;
+    }
+}
+
+.product-picture {
+    border: 1px #ccc solid;
+    overflow: hidden;
+    margin: 0 auto;
+    position: relative;
+}
+
+.product-picture:hover .zoom-hint {
+    display: none;
+}
+
+.product-picture .zoom-hint {
+    position: absolute;
+    top: 2%;
+    right: 2%;
+    width: 35px;
+    height: 35px;
+    font-size: 16px;
+    color: #5b5b5b;
+    pointer-events: none;
+    -webkit-transition: opacity .1s ease-out;
+    transition: opacity .1s ease-out;
+    speak: none;
+    font-style: normal;
+    font-weight: 400;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-family: glyphicons;
+}
+
+.zoom-hint:before {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    z-index: 1;
+    content: "\e003";
+}
+
+.zoom-hint:after {
+    width: 100%;
+    height: 100%;
+    content: "";
+    display: inline-block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    border-radius: 50%;
+    opacity: .6;
+    background: #e1e1e1;
+    z-index: 1;
+}
+
+#magiczoom-zoom {
+    animation: fade-in;
+    /*动画名称*/
+    animation-duration: 0.5s;
+    /*动画持续时间*/
+    -webkit-animation: fade-in 0.5s;
+    /*针对webkit内核*/
+}
+
+.product-picture-guide {
+    margin: 0 auto;
+    margin-top: 15px;
+    padding: 0;
+}
+
+.product-picture-guide img {
+    width: 43px;
+    height: 43px;
+    margin-right: 5px;
+    margin-bottom: 5px;
+    border: 2px rgba(192, 192, 192, 0.5) solid;
+}
+
+.product-picture-guide img.selected {
+    border: 2px black solid;
+}
+
+.product-description {
+    margin-top: 15px;
+    font: normal normal normal 16px/1.55em Museo-Slab-W01-100, serif;
+}
+
+.product-name h1 {
+    margin: 0;
+    font: normal normal normal 48px/1.146em Museo-700, serif;
+}
+
+.product-price {
+    display: inline-block;
+}
+
+.product-price h3 {
+    margin: 0;
+    padding-top: 23px;
+    margin-left: 5px;
+    font: normal normal normal 24px/1.25em Museo-700, serif;
+}
+
+.product-details-left a {
+    color: #AFAFB1;
+    margin-left: 5px;
+    font: normal normal normal 20px/1.25em Museo-700, serif;
+    font-size: 12px;
+    line-height: 25px;
+    display: inline-block;
+    text-decoration: underline;
+}
+
+.product-details-left a:hover {
+    color: #f5f6f6;
+}
+
+.product-details-left .color {
+    margin-top: 24px;
+}
+
+.product-details-left .color ul {
+    padding: 0;
+    margin: 0;
+    line-height: 0;
+    list-style: none;
+    overflow: visible;
+}
+
+.product-details-left .color ul li {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    margin: 0 14px 6px 0;
+}
+
+.product-details-left .color ul li .color-label {
+    background: rgb(0, 0, 0);
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    display: block;
+    cursor: pointer;
+    position: relative;
+    border: 1px solid #c9c9c9;
+}
+
+.product-details-left .color ul li .color-label:hover {
+    box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.9), 0 0 1px 2px #3899EC;
+}
+
+.product-details-left .color ul li .color-label.selected:not(.disabled):after {
+    border: 3px solid rgb(58, 128, 153);
+    content: "";
+    width: 28px;
+    height: 28px;
+    background: transparent;
+    position: absolute;
+    border-radius: 50%;
+    top: -5px;
+    left: -5px;
+    opacity: 1;
+}
+
+#color-tip {
+    margin-left: 65px;
+    display: none;
+    opacity: 1;
+}
+
+#color-tip .tooltip-arrow {
+    border-right-color: red;
+}
+
+#color-tip .tooltip-inner {
+    background-color: red;
+}
+
+#size {
+    font: normal normal normal 15px/1.25em Museo-700, serif;
+    position: relative;
+}
+
+#selected-size {
+    border: 1px solid silver;
+    border-radius: 0;
+    padding-left: 16px;
+    height: 47px;
+    line-height: 47px;
+    background-color: #fff;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    position: relative;
+    z-index: 999;
+    overflow: hidden;
+}
+
+#selected-size:hover {
+    border-color: #333;
+}
+
+#selected-size b {
+    position: absolute;
+    color: #575757;
+    border: 0;
+    background: none;
+    top: 1px;
+    right: 11px;
+    font-size: 10px;
+    display: inline-block;
+    width: 18px;
+    height: 100%;
+    font-family: glyphicons;
+}
+
+#selected-size b:before {
+    content: "\e259";
+}
+
+#size-list {
+    border: 1px solid silver;
+    position: absolute;
+    z-index: 999;
+    width: 100%;
+    display: none;
+}
+
+#size-list ul {
+    padding: 0;
+    margin: 0;
+}
+
+#size-list li {
+    margin: 0;
+    padding: 0;
+    background: #fff;
+    list-style: none;
+    color: #000;
+    padding-left: 16px;
+    z-index: 999;
+    height: 47px;
+    line-height: 47px;
+}
+
+#size-list li:hover {
+    background: #f1f1f1;
+}
+
+
+
+.product-details-left h4 {
+    color: #5A5959;
+    margin-bottom: 12px;
+    display: block;
+    line-height: 1;
+    font: normal normal normal 20px/1.25em Museo-700, serif;
+    font-size: 15px;
+    opacity: .75;
+}
+
+.product-details-left .quantity input {
+    font: normal normal normal 20px/1.25em Museo-700, serif;
+    width: 82px;
+    color: #575757;
+    height: 43px;
+    padding-left: 13px;
+    padding-right: 27px;
+}
+
+.product-details-left .quantity input::-webkit-outer-spin-button,
+.product-details-left .quantity input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+}
+
+.product-details-left .quantity input[type="number"] {
+    -moz-appearance: textfield;
+}
+
+.input-group{
+    width: 82px;
+    position: relative;
+}
+
+.spinner-arrows{
+    position: absolute;
+    right: 10px;
+    width: 17px;
+    height: 43px;
+    top: 0;
+    opacity: 0;
+    -webkit-transition: .3s ease-in-out;
+    transition: .3s ease-in-out;
+    font-family: glyphicons, serif;
+}
+
+.spinner-arrows:hover{
+    opacity: 1;
+}
+
+.spinner-arrows .up-arrow{
+    line-height: 28px;
+    display: block;
+    height: 50%;
+    cursor: pointer;
+    font-size: 15px;
+    opacity: .5;
+}
+
+.spinner-arrows .up-arrow:before{
+    content: "\e113";
+}
+
+.spinner-arrows .down-arrow{
+    line-height: 18px;
+    display: block;
+    height: 50%;
+    cursor: pointer;
+    font-size: 15px;
+    opacity: .5;
+}
+
+.spinner-arrows .down-arrow:before{
+    content: "\e114";
+}
+
+.product-parameters {
+    text-align: left;
+    list-style: none;
+    padding: 0;
+}
+
+.product-parameters li {
+    padding-top: 24px;
+    padding-bottom: 24px;
+    border-style: solid;
+    border-width: 1px 0;
+    border-color: rgba(10, 15, 19, 0.2);
+}
+
+.product-parameters li+li {
+    border-top: 0;
+}
+
+.product-parameters button {
+    padding: 0;
+    margin: 0;
+    padding-right: 22px;
+    position: relative;
+    display: block;
+    text-align: inherit;
+    width: 100%;
+    color: inherit;
+    text-decoration: inherit;
+    cursor: pointer;
+    border: 0;
+    height: 25px;
+    background: transparent;
+}
+
+.product-parameters h3 {
+    font: normal normal normal 16px/1.55em museo-slab-w01-100, serif;
+    line-height: 25px;
+    color: #0A0F13;
+    font-size: 15px;
+    padding: 0;
+    margin: 0;
+}
+
+.product-parameters h3:after {
+    display: inline-block;
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%);
+    text-decoration: none;
+    overflow: hidden;
+    font-size: 10px;
+    speak: none;
+    font-style: normal;
+    font-weight: 400;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-family: glyphicons;
+}
+
+.product-parameters h3.off:after {
+    content: "\002b";
+}
+
+.product-parameters h3.on:after {
+    content: "\2212";
+}
+
+.product-parameters p {
+    padding: 0;
+    padding-top: 17px;
+    font: normal normal normal 16px/1.55em museo-slab-w01-100, serif;
+    word-wrap: break-word;
+    line-height: 1.5!important;
+    color: #0A0F13;
+    display: none;
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+    word-break: break-word;
+    white-space: normal;
+    margin: 0;
+}

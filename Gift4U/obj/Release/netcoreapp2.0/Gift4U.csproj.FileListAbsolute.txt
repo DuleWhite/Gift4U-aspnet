@@ -1,0 +1,10 @@
+/Users/duulewhite/Documents/Course/Web Development/Homework/信管_0141440549_杜乐/大作业/Gift4U-aspnet/Gift4U/bin/Release/netcoreapp2.0/Gift4U.deps.json
+/Users/duulewhite/Documents/Course/Web Development/Homework/信管_0141440549_杜乐/大作业/Gift4U-aspnet/Gift4U/bin/Release/netcoreapp2.0/Gift4U.runtimeconfig.json
+/Users/duulewhite/Documents/Course/Web Development/Homework/信管_0141440549_杜乐/大作业/Gift4U-aspnet/Gift4U/bin/Release/netcoreapp2.0/Gift4U.runtimeconfig.dev.json
+/Users/duulewhite/Documents/Course/Web Development/Homework/信管_0141440549_杜乐/大作业/Gift4U-aspnet/Gift4U/bin/Release/netcoreapp2.0/Gift4U.dll
+/Users/duulewhite/Documents/Course/Web Development/Homework/信管_0141440549_杜乐/大作业/Gift4U-aspnet/Gift4U/bin/Release/netcoreapp2.0/Gift4U.pdb
+/Users/duulewhite/Documents/Course/Web Development/Homework/信管_0141440549_杜乐/大作业/Gift4U-aspnet/Gift4U/obj/Release/netcoreapp2.0/Gift4U.csproj.CoreCompileInputs.cache
+/Users/duulewhite/Documents/Course/Web Development/Homework/信管_0141440549_杜乐/大作业/Gift4U-aspnet/Gift4U/obj/Release/netcoreapp2.0/Gift4U.AssemblyInfoInputs.cache
+/Users/duulewhite/Documents/Course/Web Development/Homework/信管_0141440549_杜乐/大作业/Gift4U-aspnet/Gift4U/obj/Release/netcoreapp2.0/Gift4U.AssemblyInfo.cs
+/Users/duulewhite/Documents/Course/Web Development/Homework/信管_0141440549_杜乐/大作业/Gift4U-aspnet/Gift4U/obj/Release/netcoreapp2.0/Gift4U.dll
+/Users/duulewhite/Documents/Course/Web Development/Homework/信管_0141440549_杜乐/大作业/Gift4U-aspnet/Gift4U/obj/Release/netcoreapp2.0/Gift4U.pdb

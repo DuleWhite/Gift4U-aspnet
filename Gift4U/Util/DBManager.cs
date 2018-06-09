@@ -6,7 +6,7 @@ namespace Gift4U.Util
     {
         private MySqlConnection connection;
         private static string connectionString = "server=127.0.0.1;uid=root;" +
-            "pwd=mysqlroot;database=Gift4U";
+            "pwd=mysqlroot;database=Gift4U;SslMode=none";
         private static DBManager dBManager;
         private DBManager()
         {
